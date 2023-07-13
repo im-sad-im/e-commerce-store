@@ -323,3 +323,5 @@ export const items = [
         releaseDate: ""
     },
 ];
+
+export default items;
