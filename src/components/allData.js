@@ -98,22 +98,9 @@ export const items = [
         colorway: "UNIVERSITY RED/BLACK/WHITE",
         releaseDate: "05/20/2023"
     },
+    
     {
         id: 4,
-        category: "sneaker",
-        subCategory: "jordon",
-        description: "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its 'inside out'-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. ",
-        img: img4,
-        name: "Air Jordon 1 Mid",
-        subName: "SE Craft",
-        price: 135,
-        otherImgs: [otherImg7, otherImg8],
-        style: "DM9652-102",
-        colorway: "Sail/Fossil Stone/Celestial Gold/Taupe Haze",
-        releaseDate: "04/01/2023"
-    },
-    {
-        id: 5,
         category: "sneaker",
         subCategory: "airforce",
         description: "Pre-orders for the AF1 opened to select Louis Vuitton clients. And on July 19, nine editions of Louis Vuitton's Air Force 1 released online to the public, each priced between $2,750 and $3,450, with an in-store drop reportedly in the works.",
@@ -125,6 +112,20 @@ export const items = [
         style: "LV",
         colorway: "WHITE/RED",
         releaseDate: "07/19/2022"
+    },
+    {
+        id: 5,
+        category: "sneaker",
+        subCategory: "jordon",
+        description: "Turn style on its head with this crafted take on the Air Jordan 1 Mid. Its 'inside out'-inspired construction, including unique layering and exposed foam accents, ups the ante on this timeless Jordan Brand silhouette. ",
+        img: img4,
+        name: "Air Jordon 1 Mid",
+        subName: "SE Craft",
+        price: 135,
+        otherImgs: [otherImg7, otherImg8],
+        style: "DM9652-102",
+        colorway: "Sail/Fossil Stone/Celestial Gold/Taupe Haze",
+        releaseDate: "04/01/2023"
     },
     {
         id: 6,
@@ -212,17 +213,17 @@ export const items = [
     },
     {
         id: 12,
-        category: "sneaker",
-        subCategory: "dunks",
-        description: "From the school-spirited College Colors Program to the vibrant Nike CO.JP collection, Nike Dunks have seen many colorways since the design’s inception in 1985. But with each new colorway, the Dunk’s classic color-blocking has remained in some capacity. Nike put its timeless color-blocking to work with the Nike Dunk Low Retro White Black.",
-        img: img12,
-        name: "Nike Dunk Low Retro",
-        subName: "White Black Panda (2021)",
-        price: 122,
-        otherImgs: [otherImg23, otherImg24],
-        style: "DD1391-100",
-        colorway: "White/Black",
-        releaseDate: "03/10/2021"
+        category: "accessories",
+        subCategory: "backpack",
+        description: "The Nike Utility Speed Backpack keeps your gear close, secure and organized when commuting to and from training sessions. Cushioned straps give you comfort on the go, and the pack opens flat for easy access to must-have items.",
+        img: img17,
+        name: "Nike Utility Speed",
+        subName: "Training Backpack (27L)",
+        price: 77,
+        otherImgs: [otherImg33, otherImg34],
+        style: "CK2668-010",
+        colorway: " Black/Black/Enigma Stone",
+        releaseDate: ""
     },
     {
         id: 13,
@@ -282,18 +283,19 @@ export const items = [
     },
     {
         id: 17,
-        category: "accessories",
-        subCategory: "backpack",
-        description: "The Nike Utility Speed Backpack keeps your gear close, secure and organized when commuting to and from training sessions. Cushioned straps give you comfort on the go, and the pack opens flat for easy access to must-have items.",
-        img: img17,
-        name: "Nike Utility Speed",
-        subName: "Training Backpack (27L)",
-        price: 77,
-        otherImgs: [otherImg33, otherImg34],
-        style: "CK2668-010",
-        colorway: " Black/Black/Enigma Stone",
-        releaseDate: ""
+        category: "sneaker",
+        subCategory: "dunks",
+        description: "From the school-spirited College Colors Program to the vibrant Nike CO.JP collection, Nike Dunks have seen many colorways since the design’s inception in 1985. But with each new colorway, the Dunk’s classic color-blocking has remained in some capacity. Nike put its timeless color-blocking to work with the Nike Dunk Low Retro White Black.",
+        img: img12,
+        name: "Nike Dunk Low Retro",
+        subName: "White Black Panda (2021)",
+        price: 122,
+        otherImgs: [otherImg23, otherImg24],
+        style: "DD1391-100",
+        colorway: "White/Black",
+        releaseDate: "03/10/2021"
     },
+   
     {
         id: 18,
         category: "sneaker",
