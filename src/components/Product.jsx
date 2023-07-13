@@ -8,7 +8,7 @@ export default function Product({id, img, title, subTitle, price}) {
             <div className="product-card p-2">
                 <p className="product-title m-0"> {title} </p>
                 <p className="product-sub-title"> {subTitle} </p>
-                <span className="product-price" style={{fontWeight: "bold"}}> ${price} </span>
+                <span className="product-price fw-bold"> ${price} </span>
             </div>
         </div>
     )
