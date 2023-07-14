@@ -33,6 +33,7 @@ export default function ProductPage() {
                                 </div>
                             </div>
                         </Col>
+                        
                         <Col lg={5}>
                             <div className="right">
                                 <h2>{item[0].name}</h2>
