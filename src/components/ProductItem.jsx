@@ -1,9 +1,9 @@
+import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
-import Col from "react-bootstrap/esm/Col";
+import { Link } from "react-router-dom";
 import Product from "./Product";
 import items from "./allData";
-import { Link } from "react-router-dom";
 
 export default function ProductItem() {
     return (
@@ -19,7 +19,7 @@ export default function ProductItem() {
                             )
                         })
                     }
-                </Row>
+                </Row> 
             </Container>
         </>
     );
