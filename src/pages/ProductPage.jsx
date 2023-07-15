@@ -22,14 +22,14 @@ export default function ProductPage() {
                     <h1 className="text-center my-5"> Product Detail</h1>
                     <Row gap={10}>
                         <Col lg={7}>
-                            <div className="left mb-sm-5">
+                            <div className="left d-flex flex-column mb-sm-5">
                                 <div className="main-img w-100 d-flex justify-content-center">
                                     <img src={image} alt="product image" className="w-75 h-100 object-cover-fit" />
                                 </div>
-                                <div className="alternate-img d-flex w-100 justify-content-center align-item-center py-3 gap-3">
-                                    <img src={item[0].img} alt="product image" className="w-19 object-fit-cover h-25" onMouseOver={handleMouseOver} />
-                                    <img src={item[0].otherImgs[0]} alt="product image" className="w-19 object-fit-cover h-25" onMouseOver={handleMouseOver} />
-                                    <img src={item[0].otherImgs[1]} alt="product image" className="w-19 object-fit-cover h-25" onMouseOver={handleMouseOver} />
+                                <div className="alternate-img d-flex justify-content-center mw-19 align-item-center py-3 gap-3 align-self-center">
+                                    <img src={item[0].img} alt="product image" className="w-100 object-fit-cover h-100" onMouseOver={handleMouseOver} />
+                                    <img src={item[0].otherImgs[0]} alt="product image" className="w-100 object-fit-cover h-100" onMouseOver={handleMouseOver} />
+                                    <img src={item[0].otherImgs[1]} alt="product image" className="w-100 object-fit-cover h-100" onMouseOver={handleMouseOver} />
                                 </div>
                             </div>
                         </Col>
