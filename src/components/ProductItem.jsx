@@ -13,7 +13,7 @@ export default function ProductItem() {
                     {
                         items.map((item) => {
                             return (
-                                <Col key={item.id} lg={3} md={6} ><Link key={item.id} onClick={() => { window.scrollTo(0, 0) }} to={`/categories/product/${item.id}`}>
+                                <Col key={item.id} lg={3} md={4} sm={6}><Link key={item.id} onClick={() => { window.scrollTo(0, 0) }} to={`/categories/product/${item.id}`}>
                                     <Product img={item.img} title={item.name} subTitle={item.subName} price={item.price} id={item.id} />
                                 </Link> </Col>
                             )
