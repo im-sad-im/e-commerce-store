@@ -9,7 +9,7 @@ export default function ProductItem() {
     return (
         <>
             <Container>
-                <Row>
+                <Row className="gy-4">
                     {
                         items.map((item) => {
                             return (
