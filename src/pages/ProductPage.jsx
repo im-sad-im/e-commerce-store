@@ -4,6 +4,7 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import { useParams } from "react-router-dom";
 import items from "../components/allData";
+import Button from "react-bootstrap/Button"
 
 export default function ProductPage() {
     const { id } = useParams();
@@ -49,6 +50,7 @@ export default function ProductPage() {
                                             <p className=""> Release Date : {item[0].releaseDate} </p>
                                         }
                                     </div>
+                                    <Button size="md"> Buy now </Button>
                                 </div>
                             </div>
                         </Col>
