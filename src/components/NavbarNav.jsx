@@ -7,6 +7,10 @@ function NavbarNav() {
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
         <Navbar.Brand href="/">e.commerce</Navbar.Brand>
+          <div className="acct-btn">
+            <i>fav</i> {" "}
+            <i>buy</i>
+          </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
