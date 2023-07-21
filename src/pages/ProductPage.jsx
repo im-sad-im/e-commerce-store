@@ -1,10 +1,11 @@
 import { useState } from "react";
+import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import { useParams } from "react-router-dom";
 import items from "../components/allData";
-import Button from "react-bootstrap/Button"
+import {AiOutlineHeart} from 'react-icons/ai';
 
 export default function ProductPage() {
     const { id } = useParams();
@@ -36,7 +37,7 @@ export default function ProductPage() {
                         </Col>
                         
                         <Col lg={5}>
-                            <div className="right">
+                            <div className="right px-5">
                                 <h2>{item[0].name}</h2>
                                 <h3>{item[0].subName}</h3>
                                 <div className="product-spec">
@@ -50,7 +51,10 @@ export default function ProductPage() {
                                             <p className=""> Release Date : {item[0].releaseDate} </p>
                                         }
                                     </div>
-                                    <Button size="md"> Buy now </Button>
+                                    <div className="product-act-btn d-flex flex-column gap-3">
+                                    <Button size="md" className="py-3 text-uppercase fw-bold border-0 add-to-cart-btn" > Add to Bag </Button>
+                                    <Button size="md" className="py-3 text-uppercase fw-bold wishlist-btn "> Favorite <AiOutlineHeart size={18} className="mb-1 ms-2"/> </Button>
+                                    </div>
                                 </div>
                             </div>
                         </Col>
