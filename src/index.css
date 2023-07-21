@@ -53,3 +53,26 @@ a {
     order : 0;
   }
 }
+
+.add-to-cart-btn{
+  border-radius: 30px;
+  background-color: #000;
+  color: #ffffff;
+  transition: all 0s ease-in;
+}
+
+.add-to-cart-btn:hover, .add-to-cart-btn:active {
+  background-color: #707072 !important;
+}
+.wishlist-btn{
+  border-radius: 30px;
+  background-color: #fff;
+  color: #000;
+  border : 1px solid #CACACB;
+}
+.wishlist-btn:hover {
+  border: 1px solid #000000;
+  background-color: white !important;
+  color: #000;
+  
+}
