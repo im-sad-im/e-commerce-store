@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import items from "../components/allData";
 import {AiOutlineHeart} from 'react-icons/ai';
 
@@ -52,7 +52,7 @@ export default function ProductPage() {
                                         }
                                     </div>
                                     <div className="product-act-btn d-flex flex-column gap-3">
-                                    <Button size="md" className="py-3 text-uppercase fw-bold border-0 add-to-cart-btn" > Add to Bag </Button>
+                                   <Link to="/cart"> <Button size="md" className="py-3 text-uppercase fw-bold border-0 w-100 add-to-cart-btn" > Add to Bag </Button> </Link>
                                     <Button size="md" className="py-3 text-uppercase fw-bold wishlist-btn "> Favorite <AiOutlineHeart size={18} className="mb-1 ms-2"/> </Button>
                                     </div>
                                 </div>
