@@ -1,17 +1,22 @@
-import { useState } from "react";
+import { createContext, useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import { Link, useParams } from "react-router-dom";
 import items from "../components/allData";
-import {AiOutlineHeart} from 'react-icons/ai';
+import { AiOutlineHeart } from 'react-icons/ai';
+
+export const CartContext = createContext();
 
 export default function ProductPage() {
     const { id } = useParams();
-    const item = items.filter((item)=> item.id === parseInt(id));
+    const item = items.filter((item) => item.id === parseInt(id));
 
     const [image, setImage] = useState(item[0].img);
+
+    const { addToCart } = useContext(CartContext);
+
 
     const handleMouseOver = (e) => {
         setImage(e.target.src);
@@ -35,7 +40,7 @@ export default function ProductPage() {
                                 </div>
                             </div>
                         </Col>
-                        
+
                         <Col lg={5}>
                             <div className="right px-5">
                                 <h2>{item[0].name}</h2>
@@ -52,8 +57,10 @@ export default function ProductPage() {
                                         }
                                     </div>
                                     <div className="product-act-btn d-flex flex-column gap-3">
-                                   <Link to="/cart"> <Button size="md" className="py-3 text-uppercase fw-bold border-0 w-100 add-to-cart-btn" > Add to Bag </Button> </Link>
-                                    <Button size="md" className="py-3 text-uppercase fw-bold wishlist-btn "> Favorite <AiOutlineHeart size={18} className="mb-1 ms-2"/> </Button>
+                                        {/* <Link to="/cart"> */}
+                                        <Button size="md" className="py-3 text-uppercase fw-bold border-0 w-100 add-to-cart-btn" onClick={() => { addToCart(item[0]) }}> Add to Bag </Button>
+                                        {/* </Link> */}
+                                        <Button size="md" className="py-3 text-uppercase fw-bold wishlist-btn "> Favorite <AiOutlineHeart size={18} className="mb-1 ms-2" /> </Button>
                                     </div>
                                 </div>
                             </div>
