@@ -2,7 +2,17 @@ import { useContext } from 'react';
 import { CartContext } from "../pages/ProductPage";
 
 export default function CartItem() {
-    const { cartItem } = useContext(CartContext);
+    const { cartItem, setCartItem } = useContext(CartContext);
+
+    //remove items from cart;
+    const removeCart = (id) => {
+        setCartItem((prevItem) => {
+           return( prevItem.filter((item) => {
+                return item.id !== id;
+            }));
+        })
+    }
+
 
     return (
         <>
@@ -18,6 +28,7 @@ export default function CartItem() {
                                     <h4>{item.name}</h4>
                                     <div>{item.subName}</div>
                                     <div>{item.colorway}</div>
+                                    <button className='btn btn-secondary' onClick={() => { removeCart(item.id) }}> Del</button>
                                 </div>
                                 <div className="price">
                                     <span className='fw-bold'>${item.price}</span>
