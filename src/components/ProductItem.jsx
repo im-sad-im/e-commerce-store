@@ -6,21 +6,33 @@ import Product from "./Product";
 import items from "./allData";
 
 export default function ProductItem() {
-    return (
-        <>
-            <Container>
-                <Row className="gy-4">
-                    {
-                        items.map((item) => {
-                            return (
-                                <Col key={item.id} lg={3} md={4} sm={6}><Link key={item.id} onClick={() => { window.scrollTo(0, 0) }} to={`/categories/product/${item.id}`}>
-                                    <Product img={item.img} title={item.name} subTitle={item.subName} price={item.price} id={item.id} />
-                                </Link> </Col>
-                            )
-                        })
-                    }
-                </Row> 
-            </Container>
-        </>
-    );
+  return (
+    <>
+      <Container>
+        <Row className="gy-4">
+          {items.map((item) => {
+            return (
+              <Col key={item.id} lg={3} md={4} sm={6}>
+                <Link
+                  key={item.id}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                  }}
+                  to={`/categories/product/${item.id}`}
+                >
+                  <Product
+                    img={item.img}
+                    title={item.name}
+                    subTitle={item.subName}
+                    price={item.price}
+                    id={item.id}
+                  />
+                </Link>{" "}
+              </Col>
+            );
+          })}
+        </Row>
+      </Container>
+    </>
+  );
 }

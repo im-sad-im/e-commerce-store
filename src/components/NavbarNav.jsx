@@ -1,10 +1,10 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import { AiOutlineHeart } from 'react-icons/ai';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { AiOutlineHeart } from "react-icons/ai";
 // import {BiShoppingBag} from 'react-icons/bi';
-import { PiBag } from 'react-icons/pi';
-import { Link } from 'react-router-dom';
+import { PiBag } from "react-icons/pi";
+import { Link } from "react-router-dom";
 
 function NavbarNav() {
   return (
@@ -13,9 +13,18 @@ function NavbarNav() {
         <Navbar.Brand href="/">e.commerce</Navbar.Brand>
         <div className="acct-btn d-flex align-items-center gap-3  ">
           <AiOutlineHeart size={24} />
-          <div className='position-relative'>
-            <Link to="/cart"> <PiBag size={26} />
-              <span className='position-absolute w-100 text-center start-0 visible fw-bold' style={{ fontSize: "9px", top: "9px" }}> 1</span> </Link>
+          <div className="position-relative">
+            <Link to="/cart">
+              {" "}
+              <PiBag size={26} />
+              <span
+                className="position-absolute w-100 text-center start-0 visible fw-bold"
+                style={{ fontSize: "9px", top: "9px" }}
+              >
+                {" "}
+                1
+              </span>{" "}
+            </Link>
           </div>
         </div>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
