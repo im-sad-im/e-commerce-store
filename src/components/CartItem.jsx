@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { FaTrashAlt } from "react-icons/fa";
 import { CartContext } from "../pages/ProductPage";
 
 export default function CartItem() {
@@ -26,15 +27,11 @@ export default function CartItem() {
                 <h4>{item.name}</h4>
                 <div>{item.subName}</div>
                 <div>{item.colorway}</div>
-                <button
-                  className="btn btn-secondary"
+                <FaTrashAlt
                   onClick={() => {
                     removeCart(item.id);
                   }}
-                >
-                  {" "}
-                  Del
-                </button>
+                />
               </div>
               <div className="price">
                 <span className="fw-bold">${item.price}</span>
