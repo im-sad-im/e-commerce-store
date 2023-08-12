@@ -4,7 +4,15 @@ import { CartContext } from "../pages/ProductPage";
 import { useContext } from "react";
 
 export default function Cart() {
-  const { cartItem } = useContext(CartContext);
+  const { cartItem, setCartItem } = useContext(CartContext);
+
+  function removeCart(id) {
+    setCartItem((prevItem) => {
+      return prevItem.filter((item, index) => {
+        return index !== id;
+      });
+    });
+  }
 
   return (
     <>
@@ -30,7 +38,20 @@ export default function Cart() {
         </div>
         {/* render items if there is items in cart */}
         {cartItem.length > 0 ? (
-          <CartItem />
+          cartItem.map((item, index) => {
+            return (
+              <CartItem
+                key={index}
+                id={index}
+                img={item.img}
+                name={item.name}
+                subName={item.subName}
+                colorway={item.colorway}
+                price={item.price}
+                onRemoveCart={removeCart}
+              />
+            );
+          })
         ) : (
           <div className="no-item">
             <h3>Bag</h3>

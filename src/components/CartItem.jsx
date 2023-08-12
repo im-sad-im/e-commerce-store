@@ -1,45 +1,26 @@
-import { useContext } from "react";
 import { FaTrashAlt } from "react-icons/fa";
-import { CartContext } from "../pages/ProductPage";
 
-export default function CartItem() {
-  const { cartItem, setCartItem } = useContext(CartContext);
-
-  //remove items from cart;
-  const removeCart = (id) => {
-    setCartItem((prevItem) => {
-      return prevItem.filter((item) => {
-        return item.id !== id;
-      });
-    });
-  };
-
+export default function CartItem(props) {
   return (
-    <>
-      {cartItem.map((item) => {
-        return (
-          <div key={item.id} className="cartItem d-flex flex-row my-5 gap-4">
-            <div className="cart-img" style={{ maxWidth: "150px" }}>
-              <img src={item.img} alt="product image" className="w-100" />
-            </div>
-            <div className="cartItem-details d-flex justify-content-between w-50">
-              <div className="cartItem-content d-flex-column">
-                <h4>{item.name}</h4>
-                <div>{item.subName}</div>
-                <div>{item.colorway}</div>
-                <FaTrashAlt
-                  onClick={() => {
-                    removeCart(item.id);
-                  }}
-                />
-              </div>
-              <div className="price">
-                <span className="fw-bold">${item.price}</span>
-              </div>
-            </div>
-          </div>
-        );
-      })}
-    </>
+    <div className="cartItem d-flex flex-row my-5 gap-4">
+      <div className="cart-img" style={{ maxWidth: "150px" }}>
+        <img src={props.img} alt="product image" className="w-100" />
+      </div>
+      <div className="cartItem-details d-flex justify-content-between w-50">
+        <div className="cartItem-content d-flex-column">
+          <h4>{props.name}</h4>
+          <div>{props.subName}</div>
+          <div>{props.colorway}</div>
+          <FaTrashAlt
+            onClick={() => {
+              props.onRemoveCart(props.id);
+            }}
+          />
+        </div>
+        <div className="price">
+          <span className="fw-bold">${props.price}</span>
+        </div>
+      </div>
+    </div>
   );
 }
