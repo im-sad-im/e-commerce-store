@@ -6,6 +6,7 @@ import Row from "react-bootstrap/esm/Row";
 import { Link, useParams } from "react-router-dom";
 import items from "../components/allData";
 import { AiOutlineHeart } from "react-icons/ai";
+import ModalCart from "../components/modalCart";
 
 export const CartContext = createContext();
 
@@ -16,6 +17,8 @@ export default function ProductPage() {
   const [image, setImage] = useState(item[0].img);
 
   const { addToCart } = useContext(CartContext);
+
+  const {show, setShow} = useContext(CartContext);
 
   const handleMouseOver = (e) => {
     setImage(e.target.src);
@@ -81,6 +84,7 @@ export default function ProductPage() {
                       className="py-3 text-uppercase fw-bold border-0 w-100 add-to-cart-btn"
                       onClick={() => {
                         addToCart(item[0]);
+                        setShow(true);
                       }}
                     >
                       {" "}
@@ -95,6 +99,7 @@ export default function ProductPage() {
                       Favorite{" "}
                       <AiOutlineHeart size={18} className="mb-1 ms-2" />{" "}
                     </Button>
+                    <ModalCart image={image} name={item[0].name} subName={item[0].subName} price={item[0].price} />
                   </div>
                 </div>
               </div>
