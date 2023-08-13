@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
+  const [show, setShow] = useState(false);
 
   const addToCart = (item) => {
     setCartItem((prevItem) => {
@@ -18,7 +19,7 @@ function App() {
     });
   }
   return (
-    <CartContext.Provider value={{ addToCart, cartItem, setCartItem }}>
+    <CartContext.Provider value={{ addToCart, cartItem, setCartItem, show, setShow }}>
       <NavbarNav />
       <Routes>
         <Route path="/" element={<Home />} />
