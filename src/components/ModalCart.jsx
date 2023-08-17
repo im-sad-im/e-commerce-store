@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Col from "react-bootstrap/esm/Col";
@@ -13,6 +13,14 @@ function ModalCart({ image, name, subName, price }) {
 
   const handleClose = () => setShow(false);
   //   const handleShow = () => setShow(true);
+
+  //hide modal on interval of 5000ms
+  useEffect(() => {
+    const hideModal = setTimeout(() => {
+      setShow(false);
+    }, 5000);
+    return () => clearTimeout(hideModal);
+  }, []);
 
   return (
     <>
@@ -45,15 +53,15 @@ function ModalCart({ image, name, subName, price }) {
           </Container>
         </Modal.Body>
         <div className="button-container w-100 d-flex my-2 gap-2 px-2">
-        <Link to='/cart' className="w-100">
-          <Button
-            size="md"
-            className="py-3 text-uppercase fw-bold wishlist-btn w-100 "
-          >
-            {" "}
-            View Bag{" "}
-          </Button>
-        </Link>
+          <Link to="/cart" className="w-100">
+            <Button
+              size="md"
+              className="py-3 text-uppercase fw-bold wishlist-btn w-100 "
+            >
+              {" "}
+              View Bag{" "}
+            </Button>
+          </Link>
           <Button
             size="md"
             className="py-3 text-uppercase fw-bold border-0 w-100 add-to-cart-btn"

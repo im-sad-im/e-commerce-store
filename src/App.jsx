@@ -1,11 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.min.js';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import { useState } from "react";
 import { Route, Routes } from "react-router-dom";
+import NavbarNav from "../src/components/NavbarNav";
+import Cart from "./components/Cart";
 import Home from "./pages/Home";
 import ProductPage, { CartContext } from "./pages/ProductPage";
-import NavbarNav from "../src/components/NavbarNav"
-import Cart from './components/Cart';
-import { useState } from 'react';
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -13,13 +13,13 @@ function App() {
 
   const addToCart = (item) => {
     setCartItem((prevItem) => {
-      return (
-        [...prevItem, item]
-      );
+      return [...prevItem, item];
     });
-  }
+  };
   return (
-    <CartContext.Provider value={{ addToCart, cartItem, setCartItem, show, setShow }}>
+    <CartContext.Provider
+      value={{ addToCart, cartItem, setCartItem, show, setShow }}
+    >
       <NavbarNav />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -27,7 +27,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </CartContext.Provider>
-  )
+  );
 }
 
-export default App
+export default App;
