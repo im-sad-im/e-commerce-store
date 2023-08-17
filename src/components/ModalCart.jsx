@@ -14,11 +14,11 @@ function ModalCart({ image, name, subName, price }) {
   const handleClose = () => setShow(false);
   //   const handleShow = () => setShow(true);
 
-  //hide modal on interval of 5000ms
+  //hide modal on interval of 3000ms
   useEffect(() => {
     const hideModal = setTimeout(() => {
       setShow(false);
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(hideModal);
   }, []);
 
