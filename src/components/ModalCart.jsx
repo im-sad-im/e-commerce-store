@@ -15,12 +15,12 @@ function ModalCart({ image, name, subName, price }) {
   //   const handleShow = () => setShow(true);
 
   //hide modal on interval of 3000ms
-  useEffect(() => {
-    const hideModal = setTimeout(() => {
-      setShow(false);
-    }, 3000);
-    return () => clearTimeout(hideModal);
-  }, []);
+    useEffect(() => {
+      const hideModal = setTimeout(() => {
+        setShow(false);
+      }, 3500);
+      return () => clearTimeout(hideModal);
+    });
 
   return (
     <>
@@ -57,6 +57,9 @@ function ModalCart({ image, name, subName, price }) {
             <Button
               size="md"
               className="py-3 text-uppercase fw-bold wishlist-btn w-100 "
+              onClick={()=>{
+                setShow(false);
+              }}
             >
               {" "}
               View Bag{" "}
