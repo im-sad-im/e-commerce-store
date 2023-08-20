@@ -36,7 +36,7 @@ function NavbarNav() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#link">Categories</Nav.Link>
+            <Nav.Link href="/categories/all">Categories</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
