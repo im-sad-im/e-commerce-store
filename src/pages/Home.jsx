@@ -1,9 +1,9 @@
-import ProductItem from "../components/ProductItem";
+import { TrendingSlider } from "../components/TrendingSlider";
 
 export default function Home() {
   return (
     <>
-      <ProductItem />
+      <TrendingSlider />
     </>
   );
 }
