@@ -74,5 +74,13 @@ a {
   border: 1px solid #000000;
   background-color: white !important;
   color: #000;
-  
+}
+.scroll-container{
+  position: relative;
+  overflow-x: scroll;
+  padding: 1rem .6rem;
+  scroll-behavior: smooth;
+}
+.row-item {
+  transition: all .15s ease-in-out;
 }
