@@ -15,6 +15,7 @@ import ProductPage, { CartContext } from "./pages/ProductPage";
 function App() {
   const [cartItem, setCartItem] = useState([]);
   const [show, setShow] = useState(false);
+  const [titleName, setTitleName] = useState("All");
 
   const addToCart = (item) => {
     setCartItem((prevItem) => {
@@ -23,7 +24,7 @@ function App() {
   };
   return (
     <CartContext.Provider
-      value={{ addToCart, cartItem, setCartItem, show, setShow }}
+      value={{ addToCart, cartItem, setCartItem, show, setShow, titleName, setTitleName }}
     >
       <NavbarNav />
       <Routes>

@@ -1,29 +1,33 @@
+import { useContext } from "react";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/esm/Container";
+import { Link } from "react-router-dom";
 import img3 from "../assets/img/header/clothing.jpg";
 import img1 from "../assets/img/header/header.jpg";
 import img2 from "../assets/img/header/sneaker.jpg";
+import { CartContext } from "../pages/ProductPage";
 import { Featured } from "./Featured";
-import { Link } from "react-router-dom";
 
 export const Hero = () => {
+
+  const { setTitleName} = useContext(CartContext);
   return (
     <div className="hero-container">
       <Container>
         <Row className="gx-2">
           <Col lg={6}>
-            <Link to="/categories/sneaker">
+            <Link to="/categories/sneaker" onClick={()=>{setTitleName("Sneakers")}}>
               <Featured className="grid-one" image={img1} title={"Sneakers"} />
             </Link>
           </Col>
           <Col lg={3}>
-            <Link to="/categories/accessories">
+            <Link to="/categories/accessories"  onClick={()=>{setTitleName("Accesories")}}>
               <Featured image={img2} title={"Accesories"} />
             </Link>
           </Col>
           <Col lg={3}>
-            <Link to="/categories/allclothing">
+            <Link to="/categories/allclothing"  onClick={()=>{setTitleName("AllClothing")}}>
               <Featured image={img3} title={"AllClothing"} />
             </Link>
           </Col>

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/esm/Container";
 import { Link } from "react-router-dom";
+import { CartContext } from "../../pages/ProductPage";
 
 export default function CategoriesHeader() {
-  const [titleName, setTitleName] = useState("All");
+  // const [titleName, setTitleName] = useState("All");
+  const {titleName,setTitleName} = useContext(CartContext)
 
   const handleTitleName = (e) => {
     setTitleName(e);
