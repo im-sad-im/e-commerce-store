@@ -84,3 +84,15 @@ a {
 .row-item {
   transition: all .15s ease-in-out;
 }
+.btns button {
+  background-color:#373737;
+  border: none;
+  /* padding: 1rem; */
+  transition: all .1s ease-in;
+}
+.btns button:hover {
+  background-color: #000;
+}
+.btns button svg {
+  color : white;
+}
