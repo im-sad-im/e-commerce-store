@@ -12,9 +12,9 @@ export const TrendingItem = () => {
             <div className="item-header">
               <img src={item.img} alt="product" style={{width: "15.1rem"}}/>
             </div>
-            <div className="item-description">
+            <div className="product-title">
               <p>{item.name}</p>
-              <p className="item-price">{item.price}$</p>
+              <p className="product-price fw-bold">{item.price}$</p>
             </div>
           </Link>
         </div>
