@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { AiOutlineHeart } from "react-icons/ai";
-// import {BiShoppingBag} from 'react-icons/bi';
 import { PiBag } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { CartContext } from "../pages/ProductPage";
