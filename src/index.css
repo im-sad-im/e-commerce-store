@@ -30,9 +30,14 @@ a {
   font-weight: 500;
   font-size: 1rem;
 }
+.product-item{
+  transition: all .15s ease-in;
+  outline: 2px solid rgba(0,0,0,.205);
+  outline-offset: -2px;
+}
 
 .product-item:hover {
-  box-shadow: 0px 20px 26px 9px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+  outline: 2px solid rgba(0,0,0,.7);
 }
 
 /* navbar  */
@@ -40,76 +45,77 @@ a {
   z-index: 999;
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
 }
-.navbar-toggler:focus{
+.navbar-toggler:focus {
   box-shadow: none;
 }
 
-.navbar :nth-child(2){
-  order :3;
+.navbar :nth-child(2) {
+  order: 3;
 }
 
 @media (max-width: 992px) {
-  .navbar :nth-child(2){
-    order : 0;
+  .navbar :nth-child(2) {
+    order: 0;
   }
 }
 
-.add-to-cart-btn{
+.add-to-cart-btn {
   border-radius: 30px;
   background-color: #000;
   color: #ffffff;
   transition: all 0s ease-in;
 }
 
-.add-to-cart-btn:hover, .add-to-cart-btn:active {
+.add-to-cart-btn:hover,
+.add-to-cart-btn:active {
   background-color: #707072 !important;
 }
-.wishlist-btn{
+.wishlist-btn {
   border-radius: 30px;
   background-color: #fff;
   color: #000;
-  border : 1px solid #CACACB;
+  border: 1px solid #cacacb;
 }
 .wishlist-btn:hover {
   border: 1px solid #000000;
   background-color: white !important;
   color: #000;
 }
-.scroll-container{
+.scroll-container {
   position: relative;
   overflow-x: scroll;
-  padding: 1rem .6rem;
+  padding: 1rem 0.6rem;
   scroll-behavior: smooth;
 }
 .row-item {
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .btns button {
-  background-color:#373737;
+  background-color: #373737;
   border: none;
   /* padding: 1rem; */
-  transition: all .1s ease-in;
+  transition: all 0.1s ease-in;
 }
 .btns button:hover {
   background-color: #000;
 }
 .btns button svg {
-  color : white;
+  color: white;
 }
-.featured{
+.featured {
   cursor: pointer;
 }
-.hero-container{
+.hero-container {
   padding-top: 130px;
 }
 .lil-overlay {
-  transition: all .3s ease-in;
+  transition: all 0.3s ease-in;
 }
 .lil-overlay:hover {
-  background-color: rgba(0,0,0,0.5)!important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
 }
 .main-title {
   position: absolute;
