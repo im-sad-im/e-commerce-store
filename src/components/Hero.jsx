@@ -13,7 +13,7 @@ export const Hero = () => {
 
   const { setTitleName} = useContext(CartContext);
   return (
-    <div className="hero-container">
+    <div className="hero-container pb-5">
       <Container>
         <Row className="gx-2">
           <Col lg={6}>

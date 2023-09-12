@@ -12,7 +12,7 @@ export const TrendingSlider = () => {
     if (sliderRef.current) sliderRef.current.scrollLeft += 258;
   };
   return (
-    <section style={{ paddingTop: "10rem" }}>
+    <section style={{ padding: "8rem 0" }}>
       <div className="container">
         <div className="header-btns d-flex justify-content-between">
           <h3>Trending</h3>
