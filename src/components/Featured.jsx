@@ -1,5 +1,4 @@
 export const Featured = ({ image, title }) => {
-  console.log(image);
   return (
     <div className="featured position-relative overflow-hidden h-100">
       <div
