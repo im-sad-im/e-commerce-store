@@ -10,9 +10,9 @@ export const Banner = ({customClassName,title, description, img}) => {
     <section className="banner p-5">
       <Container>
         <Row className={`${customClassName}`}> 
-          <Col lg={6} className="px-0">
+          <Col lg={6} md={6} className="px-0">
             <div className="banner-left w-100 h-100 d-flex justify-content-center align-items-center">
-              <div className="banner-content px-5">
+              <div className="banner-content p-5">
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <Link to="categories/all">
@@ -27,9 +27,9 @@ export const Banner = ({customClassName,title, description, img}) => {
               </div>
             </div>
           </Col>
-          <Col lg={6} className="px-0">
-            <div className="banner-image">
-              <img src={img} alt="banner image" className="w-100 h-100" />
+          <Col lg={6} md={6} className="px-0 d-none d-md-block">
+            <div className="banner-image h-100">
+              <img src={img} alt="banner image" className="w-100 h-100 object-cover" />
             </div>
           </Col>
         </Row>
