@@ -16,17 +16,17 @@ export const Hero = () => {
     <div className="hero-container pb-5">
       <Container>
         <Row className="gx-2">
-          <Col lg={6} sm={4}>
+          <Col lg={6} sm={6} xs={6}>
             <Link to="/categories/sneaker" onClick={()=>{setTitleName("Sneakers")}}>
               <Featured className="grid-one" image={img1} title={"Sneakers"} />
             </Link>
           </Col>
-          <Col lg={3} sm={4}>
+          <Col lg={3} sm={3} xs={3}>
             <Link to="/categories/accessories"  onClick={()=>{setTitleName("Accesories")}}>
               <Featured image={img2} title={"Accesories"} />
             </Link>
           </Col>
-          <Col lg={3} sm={4}>
+          <Col lg={3} sm={3} xs={3}>
             <Link to="/categories/allclothing"  onClick={()=>{setTitleName("AllClothing")}}>
               <Featured image={img3} title={"AllClothing"} />
             </Link>
