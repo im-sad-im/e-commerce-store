@@ -13,7 +13,7 @@ export default function CategoriesAccessories() {
         <Row className="gy-4">
           {filteredItems.map((item) => {
             return (
-              <Col key={item.id} lg={3} md={4} sm={6}>
+              <Col key={item.id} lg={3} md={4} sm={6} xs={6}>
                 <Link
                   key={item.id}
                   onClick={() => {
