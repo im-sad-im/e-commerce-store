@@ -28,7 +28,7 @@ function App() {
     >
       <NavbarNav />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route index path="/" element={<Home />} />
         <Route path="/categories" element={<Categories />} >
           <Route path="/categories/all" element={<ProductItem />} />
           <Route path="/categories/sneaker" element={<CategorieswithSneaker />} />
