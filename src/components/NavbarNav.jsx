@@ -16,11 +16,13 @@ function NavbarNav() {
       <Container>
         <Navbar.Brand href="/">e.commerce</Navbar.Brand>
         <div className="acct-btn d-flex align-items-center gap-3  ">
-          <AiOutlineHeart size={24} />
+        <Link to="/favorite">
+          <AiOutlineHeart size={24} title="Favorites" />
+        </Link>
           <div className="position-relative">
             <Link to="/cart">
               {" "}
-              <PiBag size={26} />
+              <PiBag size={26} title={`Bag items : ${cartItem.length}`}/>
               <span
                 className="position-absolute w-100 text-center start-0 visible fw-bold"
                 style={{ fontSize: "9px", top: "9px" }}
