@@ -11,6 +11,7 @@ import ProductItem from "./components/ProductItem";
 import Categories from "./pages/Categories";
 import Home from "./pages/Home";
 import ProductPage, { CartContext } from "./pages/ProductPage";
+import { Favorite } from "./components/Favorite";
 
 function App() {
   const [cartItem, setCartItem] = useState([]);
@@ -37,6 +38,7 @@ function App() {
         </Route>
         <Route path="/categories/product/:id" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/favorite" element={<Favorite />} />
       </Routes>
     </CartContext.Provider>
   );
