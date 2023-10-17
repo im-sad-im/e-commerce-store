@@ -16,7 +16,7 @@ function NavbarNav() {
       <Container>
         <Navbar.Brand href="/">e.commerce</Navbar.Brand>
         <div className="acct-btn d-flex align-items-center gap-3  ">
-          <AiOutlineHeart size={24} title="Favorites" />
+          <Link to="/favorite"> <AiOutlineHeart size={24} title="Favorites" /> </Link>
           <div className="position-relative">
             <Link to="/cart">
               {" "}
