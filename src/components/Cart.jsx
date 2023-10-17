@@ -16,7 +16,7 @@ export default function Cart() {
 
   return (
     <>
-      <Container className="mt-5">
+      <Container className="mt-5 pt-5">
         <div className="membership border p-2">
           <h4 style={{ color: "#FF5000" }}>
             Members get free shipping on orders $50+
