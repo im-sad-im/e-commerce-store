@@ -130,9 +130,20 @@ a {
   position: absolute;
   left: 20px;
   bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: white;
+}
+@media (max-width: 998px) {
+  .main-title{
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 772px) {
+  .main-title{
+    font-size: 1.2rem;
+    left: 5px;
+  }
 }
 .banner-left {
   background-color: #e9e9e9;
