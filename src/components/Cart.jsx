@@ -2,6 +2,7 @@ import Container from "react-bootstrap/esm/Container";
 import CartItem from "./CartItem";
 import { CartContext } from "../pages/ProductPage";
 import { useContext } from "react";
+import { Empty } from "./Empty";
 
 export default function Cart() {
   const { cartItem, setCartItem } = useContext(CartContext);
@@ -53,10 +54,7 @@ export default function Cart() {
             );
           })
         ) : (
-          <div className="no-item">
-            <h3>Bag</h3>
-            <p>There are no items in your bag.</p>
-          </div>
+          <Empty title={"Bag"} />
         )}
       </Container>
     </>
