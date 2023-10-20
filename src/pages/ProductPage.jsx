@@ -81,9 +81,10 @@ export default function ProductPage() {
                     {/* <Link to="/cart"> */}
                     <Button
                       size="md"
+                      name="bag"
                       className="py-3 text-uppercase fw-bold border-0 w-100 add-to-cart-btn"
-                      onClick={() => {
-                        addToCart(item[0]);
+                      onClick={(e) => {
+                        addToCart(item[0], e.target.name);
                         setShow(!show);
                       }}
                     >
@@ -92,8 +93,12 @@ export default function ProductPage() {
                     </Button>
                     {/* </Link> */}
                     <Button
+                      name="favorite"
                       size="md"
                       className="py-3 text-uppercase fw-bold wishlist-btn "
+                      onClick={(e)=>{
+                        addToCart(item[0], e.target.name);
+                      }}
                     >
                       {" "}
                       Favorite{" "}

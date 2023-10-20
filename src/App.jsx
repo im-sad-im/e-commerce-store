@@ -13,19 +13,26 @@ import Home from "./pages/Home";
 import ProductPage, { CartContext } from "./pages/ProductPage";
 import { Favorite } from "./components/Favorite";
 
-function App() {
+export default function App() {
   const [cartItem, setCartItem] = useState([]);
+  const [favoriteItem, setFavoriteItem] = useState([]);
   const [show, setShow] = useState(false);
   const [titleName, setTitleName] = useState("All");
 
-  const addToCart = (item) => {
+  const addToCart = (item, name) => {
+    (name === "bag") ? (
     setCartItem((prevItem) => {
       return [...prevItem, item];
-    });
+    })
+    ) : 
+    setFavoriteItem((prevItem => {
+      return [...prevItem, item];
+    }))
   };
+
   return (
     <CartContext.Provider
-      value={{ addToCart, cartItem, setCartItem, show, setShow, titleName, setTitleName }}
+      value={{ addToCart, cartItem, setCartItem, show, setShow, titleName, setTitleName, favoriteItem, setFavoriteItem }}
     >
       <NavbarNav />
       <Routes>
@@ -43,5 +50,3 @@ function App() {
     </CartContext.Provider>
   );
 }
-
-export default App;
