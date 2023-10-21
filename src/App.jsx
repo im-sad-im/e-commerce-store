@@ -20,14 +20,13 @@ export default function App() {
   const [titleName, setTitleName] = useState("All");
 
   const addToCart = (item, name) => {
-    (name === "bag") ? (
-    setCartItem((prevItem) => {
+    name === "bag" 
+    ?setCartItem((prevItem) => {
+       return [...prevItem, item];
+    })
+     : setFavoriteItem((prevItem) => {
       return [...prevItem, item];
     })
-    ) : 
-    setFavoriteItem((prevItem => {
-      return [...prevItem, item];
-    }))
   };
 
   return (

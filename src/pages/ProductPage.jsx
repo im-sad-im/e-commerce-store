@@ -4,7 +4,7 @@ import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import { AiOutlineHeart } from "react-icons/ai";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import items from "../components/allData";
 import ModalCart from "../components/modalCart";
 
@@ -16,9 +16,8 @@ export default function ProductPage() {
 
   const [image, setImage] = useState(item[0].img);
 
-  const { addToCart } = useContext(CartContext);
+  const { addToCart, show, setShow } = useContext(CartContext);
 
-  const { show, setShow } = useContext(CartContext);
 
   const handleMouseOver = (e) => {
     setImage(e.target.src);
@@ -92,7 +91,7 @@ export default function ProductPage() {
                       Add to Bag{" "}
                     </Button>
                     {/* </Link> */}
-                    <Button
+                    <Button as={Link} to="/favorite"
                       name="favorite"
                       size="md"
                       className="py-3 text-uppercase fw-bold wishlist-btn "
