@@ -1,4 +1,3 @@
-import React from "react";
 import { items } from "./allData";
 import { Link } from "react-router-dom";
 

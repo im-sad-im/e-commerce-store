@@ -1,6 +1,6 @@
-export default function Product({ id, img, title, subTitle, price }) {
+export default function Product({ img, title, subTitle, price }) {
   return (
-    <div className="product-item" key={id}>
+    <div className="product-item">
       <div className="product-header">
         <img src={img} alt="product" className="img-fluid" />
       </div>
