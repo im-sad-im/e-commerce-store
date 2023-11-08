@@ -20,27 +20,46 @@ export default function App() {
   const [titleName, setTitleName] = useState("All");
 
   const addToCart = (item, name) => {
-    name === "bag" 
-    ?setCartItem((prevItem) => {
-       return [...prevItem, item];
-    })
-     : setFavoriteItem((prevItem) => {
-      return [...prevItem, item];
-    })
+    name === "bag"
+      ? setCartItem((prevItem) => {
+          return [...prevItem, item];
+        })
+      : setFavoriteItem((prevItem) => {
+          return [...prevItem, item];
+        });
   };
 
   return (
     <CartContext.Provider
-      value={{ addToCart, cartItem, setCartItem, show, setShow, titleName, setTitleName, favoriteItem, setFavoriteItem }}
+      value={{
+        addToCart,
+        cartItem,
+        setCartItem,
+        show,
+        setShow,
+        titleName,
+        setTitleName,
+        favoriteItem,
+        setFavoriteItem,
+      }}
     >
       <NavbarNav />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories />} >
+        <Route path="/categories" element={<Categories />}>
           <Route path="/categories/all" element={<ProductItem />} />
-          <Route path="/categories/sneaker" element={<CategorieswithSneaker />} />
-          <Route path="/categories/accessories" element={<CategoriesAccessories />} />
-          <Route path="/categories/allclothing" element={<CategoriesAllClothing />} /> 
+          <Route
+            path="/categories/sneaker"
+            element={<CategorieswithSneaker />}
+          />
+          <Route
+            path="/categories/accessories"
+            element={<CategoriesAccessories />}
+          />
+          <Route
+            path="/categories/allclothing"
+            element={<CategoriesAllClothing />}
+          />
         </Route>
         <Route path="/categories/product/:id" element={<ProductPage />} />
         <Route path="/cart" element={<Cart />} />
