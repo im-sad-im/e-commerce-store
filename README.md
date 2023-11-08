@@ -1,7 +1,7 @@
 # e-commerce-store 
 e-commerce-store website features a modern and intuitive design, with easy-to-use navigation and a simple shopping experience that puts the focus on the products.
 
-<a href="https://e-commerce-store-ivory.vercel.app/" target="_blank">**Visit Now** 🚀</a>
+<a href="https://e-commerce-store-nine-rust.vercel.app/" target="_blank">**Visit Now** 🚀</a>
 
 ## Build with:
 - HTML5
