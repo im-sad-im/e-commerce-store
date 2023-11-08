@@ -57,9 +57,7 @@ function ModalCart({ image, name, subName, price }) {
             <Button
               size="md"
               className="py-3 text-uppercase fw-bold wishlist-btn w-100 "
-              onClick={()=>{
-                setShow(false);
-              }}
+              onClick={handleClose}
             >
               {" "}
               View Bag{" "}

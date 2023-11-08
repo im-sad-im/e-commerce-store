@@ -5,8 +5,8 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 import { AiOutlineHeart } from "react-icons/ai";
 import { Link, useParams } from "react-router-dom";
+import ModalCart from "../components/ModalCart";
 import items from "../components/allData";
-import ModalCart from "../components/modalCart";
 
 export const CartContext = createContext();
 
@@ -25,7 +25,7 @@ export default function ProductPage() {
 
   return (
     <>
-      <div className="product-page">
+      <div className="product-page pt-5">
         <Container>
           <h1 className="text-center my-5"> Product Detail</h1>
           <Row gap={10}>
