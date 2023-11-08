@@ -46,24 +46,24 @@ export default function App() {
       <NavbarNav />
       <Routes>
         <Route index path="/" element={<Home />} />
-        <Route path="/categories" element={<Categories />}>
-          <Route path="/categories/all" element={<ProductItem />} />
+        <Route path="categories" element={<Categories />}>
+          <Route path="all" element={<ProductItem />} />
           <Route
-            path="/categories/sneaker"
+            path="sneaker"
             element={<CategorieswithSneaker />}
           />
           <Route
-            path="/categories/accessories"
+            path="accessories"
             element={<CategoriesAccessories />}
           />
           <Route
-            path="/categories/allclothing"
+            path="allclothing"
             element={<CategoriesAllClothing />}
           />
         </Route>
-        <Route path="/categories/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/favorite" element={<Favorite />} />
+        <Route path="categories/product/:id" element={<ProductPage />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="favorite" element={<Favorite />} />
       </Routes>
     </CartContext.Provider>
   );
